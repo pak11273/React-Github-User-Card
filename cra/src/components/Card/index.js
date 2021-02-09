@@ -2,14 +2,20 @@ import React, { Component } from "react";
 
 export default class Card extends Component {
   render() {
-    const { username, avatar_url, followers, following } = this.props.user;
+    const {
+      login,
+      location,
+      avatar_url,
+      followers,
+      following,
+    } = this.props.user;
     return (
       <div className="card">
-        <h1>Github User</h1>
-        <div>{username}</div>
+        <h4>{login}</h4>
         <img src={avatar_url} alt="avatar" />
-        <div>{followers}</div>
-        <div>{following}</div>
+        <div>location: {location}</div>
+        <div>followers: {followers}</div>
+        <div>following: {following}</div>
       </div>
     );
   }

@@ -14,6 +14,7 @@ class App extends Component {
     fetch("https://api.github.com/users/pak11273")
       .then((res) => res.json())
       .then((user) => {
+        console.log(user);
         this.setState({ user });
       })
       .catch((err) => console.log(err));
@@ -30,26 +31,32 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img
+            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            className="App-logo"
+            alt="logo"
+          />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Github Users <code>API</code>
           </p>
-          <a
+          {/* <a
             className="App-link"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
           >
             Github Users
-          </a>
+          </a> */}
         </header>
-        <Card user={this.state.user} />
-        <h1>Followers</h1>
-        <div>
-          {this.state.followers.map((user, i) => {
-            return <Card key={i} user={user} />;
-          })}
-        </div>
+        <main className="main">
+          <Card user={this.state.user} />
+          <h1>Followers</h1>
+          <div className="followers">
+            {this.state.followers.map((user, i) => {
+              return <Card key={i} user={user} />;
+            })}
+          </div>
+        </main>
       </div>
     );
   }

@@ -62,9 +62,9 @@ When you have those completed, you're ready to start coding!
 
 #### Style the User Card
 
-- Now it's time to style up your app
+<!-- - Now it's time to style up your app
 - You are free to choose how you style your app, but make it look as presentable as you can
-- Try something new here. Maybe that's a new CSS technique you haven't really practiced yet. Maybe it's using a styling library you haven't tried. Push yourself to get better in this area.
+- Try something new here. Maybe that's a new CSS technique you haven't really practiced yet. Maybe it's using a styling library you haven't tried. Push yourself to get better in this area. -->
 
 #### Project Retrospective
 
