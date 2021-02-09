@@ -9,13 +9,14 @@ export default class Card extends Component {
       followers,
       following,
     } = this.props.user;
+    console.log(this.props.user);
     return (
       <div className="card">
         <h4>{login}</h4>
         <img src={avatar_url} alt="avatar" />
-        <div>location: {location}</div>
-        <div>followers: {followers}</div>
-        <div>following: {following}</div>
+        <div>location: {location || "no-info"}</div>
+        <div>followers: {followers || "no-info"}</div>
+        <div>following: {following || "no-info"}</div>
       </div>
     );
   }
